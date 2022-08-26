@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+// use Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +22,6 @@ Route::get('signup',function(){
 Route::get('signin',function(){
     return view('signin');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
