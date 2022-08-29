@@ -134,7 +134,7 @@
                     </div>
                     <div>
                         Do not have an account?
-                        <a href="{{ url('signup') }}" class="text-primary _600">Sign up</a>
+                        <a href="{{ url('register') }}" class="text-primary _600">Sign up</a>
                     </div>
                 </div>
             </div>
