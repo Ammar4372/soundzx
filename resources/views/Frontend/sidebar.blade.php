@@ -36,8 +36,7 @@
             </div>
         </div>
         <div class="col-xs-12">
-            <div class="item r" data-id="item-4"
-                data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+            <div class="item r" data-id="item-4" data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                 <div class="item-media ">
                     <a href="track.detail.html" class="item-media-content"
                         style="background-image: url('images/b3.jpg');"></a>
@@ -53,8 +52,7 @@
             </div>
         </div>
         <div class="col-xs-12">
-            <div class="item r" data-id="item-9"
-                data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+            <div class="item r" data-id="item-9" data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                 <div class="item-media ">
                     <a href="track.detail.html" class="item-media-content"style="background-image: url('images/b8.jpg');"></a>
                 </div>
@@ -69,8 +67,7 @@
             </div>
         </div>
         <div class="col-xs-12">
-            <div class="item r" data-id="item-3"
-                data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+            <div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                 <div class="item-media ">
                     <a href="track.detail.html" class="item-media-content"
                         style="background-image: url('images/b2.jpg');"></a>

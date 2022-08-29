@@ -71,7 +71,7 @@
     </div>
 </div>
 @endsection --}}
-@include('Frontend/header')
+@include('Frontend.header')
 
 <body>
     <div class="app dk" id="app">
@@ -82,7 +82,7 @@
             <div class="navbar">
                 <div class="pull-center">
                     <!-- brand -->
-                    @include('Frontend/brand')
+                    @include('Frontend.brand')
                     <!-- / brand -->
                 </div>
             </div>
@@ -103,24 +103,12 @@
                     <div class="m-y text-sm">
                         OR
                     </div>
-                    <form name="form" method="POST" action="{{ route('login') }}">
-                        @csrf
+                    <form name="form" action="{{ route('login') }}" method="POST">
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="Email" required>
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" class="form-control" placeholder="password" required>
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                         </div>
                         <div class="m-b-md">
                             <label class="md-check">
@@ -130,16 +118,27 @@
                         <button type="submit" class="btn btn-lg black p-x-lg">Sign in</button>
                     </form>
                     <div class="m-y">
-                        <a href="forgot-password.html" class="_600">Forgot password?</a>
+                        @if (Route::has('password.request'))
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                Forgot Your Password?
+                            </a>
+                        @endif
                     </div>
                     <div>
                         Do not have an account?
-                        <a href="{{ url('signup') }}" class="text-primary _600">Sign up</a>
+                        <a href="{{ url('register') }}" class="text-primary _600">Sign up</a>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- ############ LAYOUT END-->
     </div>
 
-    @include('Frontend/footer')
+    <!-- build:js scripts/app.min.js -->
+    <!-- jQuery -->
+    @include('Frontend.Scripts')
+    <!-- endbuild -->
+</body>
+
+</html>

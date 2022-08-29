@@ -113,23 +113,39 @@
                     </span>
                 </a>
                 <div class="dropdown-menu w dropdown-menu-scale ">
-                    <a class="dropdown-item" href="profile.html#profile">
+                    <a class="dropdown-item" href="">
                         <span>Profile</span>
                     </a>
-                    <a class="dropdown-item" href="profile.html#tracks">
+                    <a class="dropdown-item" href="">
                         <span>Tracks</span>
                     </a>
-                    <a class="dropdown-item" href="profile.html#playlists">
+                    <a class="dropdown-item" href="">
                         <span>Playlists</span>
                     </a>
-                    <a class="dropdown-item" href="profile.html#likes">
+                    <a class="dropdown-item" href="">
                         <span>Likes</span>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="docs.html">
+                    <a class="dropdown-item" href="">
                         Need help?
                     </a>
-                    <a class="dropdown-item" href="signin.html">Sign out</a>
+                    @auth
+                        
+                    <a class="dropdown-item" href="{{url('logout')}}">
+                        Sign out
+                    </a>
+                    @endauth
+                    @guest
+                        
+                    <a href="{{url('register')}}" class="nav-link">
+                        Signup
+                    </a>
+                    <a href="{{url('login')}}" class="nav-link">
+                        <span class="btn btn-sm rounded primary _600">
+                            Signin
+                        </span>
+                    </a>
+                    @endguest
                 </div>
             </div>
 

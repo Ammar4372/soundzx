@@ -107,41 +107,20 @@
                     <div class="m-y text-sm">
                         OR
                     </div>
-                    <form name="form" method="POST" action="{{ route('register') }}">
-                        @csrf
+                    <form name="form" method="POST" action="{{url('register')}}">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Username" required>
-                            @error('name')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="text" class="form-control" name="name" placeholder="Username" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Password" required>
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password_confirmation" class="form-control"
-                                placeholder="Password" required>
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="password" class="form-control" name="password_confirmation" placeholder="Password" required>
                         </div>
+
                         <div class="m-b-md text-sm">
                             <span class="text-muted">By clicking Sign Up, I agree to the</span>
                             <a href="#">Terms of service</a>
@@ -151,8 +130,7 @@
                         <button type="submit" class="btn btn-lg black p-x-lg">Sign Up</button>
                     </form>
                     <div class="p-y-lg text-center">
-                        <div>Already have an account? <a href="{{ url('login') }}" class="text-primary _600">Sign
-                                in</a></div>
+                        <div>Already have an account? <a href="{{url('login')}}" class="text-primary _600">Sign in</a></div>
                     </div>
                 </div>
             </div>
@@ -161,4 +139,10 @@
         <!-- ############ LAYOUT END-->
     </div>
 
-    @include('Frontend/footer')
+    <!-- build:js scripts/app.min.js -->
+    <!-- jQuery -->
+    @include('Frontend.Scripts')
+    <!-- endbuild -->
+</body>
+
+</html>

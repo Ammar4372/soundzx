@@ -48,7 +48,7 @@
                 <a class="dropdown-item" href="docs.html">
                     Need help?
                 </a>
-                <a class="dropdown-item" href="signin.html">Sign out</a>
+                <a class="dropdown-item" href="{{'logout'}}">Sign out</a>
             </div>
         </li>
     </ul>
