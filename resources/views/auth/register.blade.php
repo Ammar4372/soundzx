@@ -142,7 +142,7 @@
 
     <!-- build:js scripts/app.min.js -->
     <!-- jQuery -->
-    @include('Frontend.Scripts')
+    
     <!-- endbuild -->
 </body>
 
