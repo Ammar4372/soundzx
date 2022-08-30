@@ -104,6 +104,7 @@
                         OR
                     </div>
                     <form name="form" action="{{ route('login') }}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>

@@ -108,6 +108,7 @@
                         OR
                     </div>
                     <form name="form" method="POST" action="{{url('register')}}">
+                        @csrf
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" placeholder="Username" required>
                         </div>
