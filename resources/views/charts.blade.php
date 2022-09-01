@@ -8,7 +8,7 @@
         <!-- aside -->
 
         <!-- fluid app aside -->
-        @include('Frontend.sideNavbar')
+        @include('Frontend.lognav')
 
         <!-- / -->
 
@@ -402,12 +402,10 @@
                                                         <i class="fa fa-heart m-l-sm text-muted"></i> 2310
                                                     </span>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="col-lg-3 w-xxl w-auto-md">
@@ -423,20 +421,20 @@
         <!-- / -->
 
         <!-- ############ SWITHCHER START-->
-        @include('Frontend.themeSwitcher')
+        
         <!-- ############ SWITHCHER END-->
         <!-- ############ SEARCH START -->
-        @include('Frontend.search')
+        
         <!-- ############ SEARCH END -->
         <!-- ############ SHARE START -->
-        @include('Frontend.share')
+        
         <!-- ############ SHARE END -->
 
         <!-- ############ LAYOUT END-->
     </div>
 
     <!-- build:js scripts/app.min.js -->
-    @include('Frontend.Scripts')
+    @include('Frontend.scripts')
     <!-- endbuild -->
 </body>
 

@@ -1,12 +1,10 @@
-@section('indexNavbar')
+{{-- @section('homeNavbar')
     <div class="navbar" data-pjax>
         <a data-toggle="collapse" data-target="#navbar" class="navbar-item pull-right hidden-md-up m-r-0 m-l">
             <i class="material-icons">menu</i>
         </a>
         <!-- brand -->
-        <a href="index.html" class="navbar-brand md">
-            @include('Frontend.brand')
-        </a>
+        @include('Frontend.brand')
         <!-- / brand -->
 
         <!-- nabar right -->
@@ -84,7 +82,7 @@
         </div>
         <!-- / navbar collapse -->
     </div>
-@endsection
+@endsection --}}
 @section('sideNavbar')
     <div id="aside" class="app-aside modal fade nav-dropdown">
         <div class="left navside grey dk" data-layout="column">
@@ -101,7 +99,7 @@
                             <span class="text-xs text-muted">Main</span>
                         </li>
                         <li>
-                            <a href="{{ url('player') }}">
+                            <a href="{{ url('home') }}">
                                 <span class="nav-icon">
                                     <i class="material-icons">
                                         play_circle_outline
@@ -217,46 +215,30 @@
                         <a class="dropdown-item" href="">
                             Need help?
                         </a>
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                        {{-- @guest
+                            <a class="dropdown-item" href="{{ route('login') }}">
+                                Login
+                            </a>
+                            <a class="dropdown-item" href="{{ route('register') }}">
+                                Register
+                            </a>
+                        @endguest --}}
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                            {{ __('Logout') }}
+                        </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-@endsection
-@section('indexNavbar')
+@show
+{{-- @section('indexNavbar')
     <div class="navbar" data-pjax>
         <a data-toggle="collapse" data-target="#navbar" class="navbar-item pull-right hidden-md-up m-r-0 m-l">
             <i class="material-icons">menu</i>
@@ -306,4 +288,4 @@
         </div>
         <!-- / navbar collapse -->
     </div>
-@endsection
+@endsection --}}

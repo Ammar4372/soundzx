@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -11,22 +13,15 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
-Route::get('player',function(){
-    return(view('player'));
-});
-Route::get('browse',function(){
-    return(view('browse'));
-});
-Route::get('charts',function(){
-    return(view('charts'));
-});
-Route::get('artist',function(){
-    return(view('artist'));
-});
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::get('browse', [UserController::class, 'browse']);
+    Route::get('charts', [UserController::class, 'charts']);
+    Route::get('artist', [UserController::class, 'artist']);
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');

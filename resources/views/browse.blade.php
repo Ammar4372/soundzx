@@ -6,7 +6,7 @@
         <!-- aside -->
 
         <!-- fluid app aside -->
-        @include('Frontend.sideNavbar')
+        @include('Frontend.lognav')
 
         <!-- / -->
         <!-- content -->
@@ -487,21 +487,22 @@
         <!-- / -->
 
         <!-- ############ SWITHCHER START-->
-        @include('Frontend.themeSwitcher')
+        
         <!-- ############ SWITHCHER END-->
         <!-- ############ SEARCH START -->
-        @include('Frontend.search')
+        
         <!-- ############ SEARCH END -->
         <!-- ############ SHARE START -->
-        @include('Frontend.share')
+        
         <!-- ############ SHARE END -->
 
         <!-- ############ LAYOUT END-->
     </div>
 
     <!-- build:js scripts/app.min.js -->
+    @include('Frontend.scripts')
     <!-- jQuery -->
-    @include('Frontend/Scripts')
+    
 </body>
 
 </html>
