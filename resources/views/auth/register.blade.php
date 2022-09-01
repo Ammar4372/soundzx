@@ -107,19 +107,60 @@
                     <div class="m-y text-sm">
                         OR
                     </div>
-                    <form name="form" method="POST" action="{{url('register')}}">
+                    <form name="form" method="POST" action="{{ url('register') }}">
                         @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" placeholder="Username" required>
+                            <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
+                            @error('first_name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
+                            @error('last_name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" placeholder="Email" required>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="number" placeholder="Phone Number" required>
+                            @error('number')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <select name="" class="form-control" placeholder="Select Country">
+                                <option value="pakistan">Pakistan</option>
+                                <option value="turkey">Turkey</option>
+                                <option value="saudi arabia">Saudi Arabia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="city" class="form-control" placeholder="Enter City" required>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" name="password" placeholder="Password" required>
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" name="password_confirmation" placeholder="Password" required>
+                            <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required>
                         </div>
 
                         <div class="m-b-md text-sm">
@@ -131,7 +172,8 @@
                         <button type="submit" class="btn btn-lg black p-x-lg">Sign Up</button>
                     </form>
                     <div class="p-y-lg text-center">
-                        <div>Already have an account? <a href="{{url('login')}}" class="text-primary _600">Sign in</a></div>
+                        <div>Already have an account? <a href="{{ url('login') }}" class="text-primary _600">Sign
+                                in</a></div>
                     </div>
                 </div>
             </div>
@@ -142,7 +184,7 @@
 
     <!-- build:js scripts/app.min.js -->
     <!-- jQuery -->
-    
+
     <!-- endbuild -->
 </body>
 
