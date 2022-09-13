@@ -8,6 +8,6 @@
         <circle cx="24" cy="24" r="3" fill="#000000" />
     </svg>
 
-    <img src="images/logo.png" alt="." class="hide">
+    <img src="{{asset('images/logo.png')}}" alt="." class="hide">
     <span class="hidden-folded inline">pulse</span>
 </a>

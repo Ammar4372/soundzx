@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>pulse - Music, Audio and Radio web application</title>
-    <meta name="description" content="Music, Musician, Bootstrap" >
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" >
+    <meta name="description" content="Music, Musician, Bootstrap">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- for ios 7 style, multi-resolution icon of 152x152 -->
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/material-design-icons/material-design-icons.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" />
-
+    
     <!-- build:css css/styles/app.min.css -->
     <link rel="stylesheet" href="{{ asset('css/styles/app.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/styles/style.css') }}" type="text/css" />
